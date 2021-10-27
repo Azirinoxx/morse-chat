@@ -1,14 +1,13 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . # . .
-        . . . . .
-        . . . . .
-        `)
-    music.playTone(262, music.beat(BeatFraction.Quarter))
     if (receivedNumber == 0) {
-    	
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . # . .
+            . . . . .
+            . . . . .
+            `)
+        music.playTone(262, music.beat(BeatFraction.Quarter))
     } else {
         basic.showLeds(`
             . . . . .
@@ -17,8 +16,8 @@ radio.onReceivedNumber(function (receivedNumber) {
             . . . . .
             . . . . .
             `)
+        music.playTone(262, music.beat(BeatFraction.Whole))
     }
-    music.playTone(262, music.beat(BeatFraction.Whole))
     basic.clearScreen()
 })
 input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
